@@ -11,6 +11,8 @@ TagManager:
   - GreenTable
   - BlueTable
   - RedTable
+  - GreenBall
+  - RedBall
   layers:
   - Default
   - TransparentFX
