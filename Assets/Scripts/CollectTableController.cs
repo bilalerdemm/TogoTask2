@@ -6,18 +6,15 @@ using UnityEngine;
 public class CollectTableController : MonoBehaviour
 {
     //public List<GameObject> BallList = new List<GameObject>();
-    public int maxChildCount=12;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("aaaaadad");
-            int childCount = Random.Range(5, maxChildCount);
+            int childCount = Random.Range(5, 12);
             transform.GetChild(childCount).transform.parent = other.gameObject.transform;
-            other.gameObject.transform.GetChild(0).transform.position = other.gameObject.transform.position;
-            maxChildCount -= maxChildCount;
         }
+
         #region
         /*
         if (other.gameObject.CompareTag("Player"))
