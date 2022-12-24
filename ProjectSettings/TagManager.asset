@@ -8,6 +8,9 @@ TagManager:
   - CompareTable
   - CompareTableGreen
   - CompareTableRed
+  - GreenTable
+  - BlueTable
+  - RedTable
   layers:
   - Default
   - TransparentFX
