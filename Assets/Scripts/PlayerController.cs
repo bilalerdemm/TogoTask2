@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    //public GameObject collectPoint;
+    public GameObject collectPoint;
     public int maxChildCount;
+    public SkinnedMeshRenderer playerMesh;
+
+    private void Start()
+    {
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,18 +22,29 @@ public class PlayerController : MonoBehaviour
 
             int childCount = Random.Range(1, maxChildCount);
             maxChildCount -= maxChildCount;
-            other.gameObject.transform.GetChild(childCount).transform.parent = transform;
-        }
+            if (this.transform.childCount < 4)
+            {
+                playerMesh.material.color = other.gameObject.transform.GetChild(childCount).GetComponent<MeshRenderer>().material.color;
+                other.gameObject.transform.GetChild(childCount).transform.parent = transform;
+                this.transform.GetChild(3).transform.position = collectPoint.transform.position;
+            }
 
-        if (other.gameObject.CompareTag("GreenTable"))
+
+        }
+        if (transform.childCount==4)
         {
-            transform.GetChild(2).transform.parent = other.gameObject.transform;
-        }
 
-        if (other.gameObject.CompareTag("RedTable"))
-        {
-            transform.GetChild(2).transform.parent = other.gameObject.transform;
-        }
 
+            if (other.gameObject.CompareTag("GreenTable"))
+            {
+                transform.GetChild(3).transform.parent = other.gameObject.transform;
+
+            }
+
+            if (other.gameObject.CompareTag("RedTable"))
+            {
+                transform.GetChild(3).transform.parent = other.gameObject.transform;
+            }
+        }
     }
 }

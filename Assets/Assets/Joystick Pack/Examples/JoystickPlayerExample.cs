@@ -18,7 +18,7 @@ public class JoystickPlayerExample : MonoBehaviour
         Vector3 direction = Vector3.forward * dynamicJoystick.Vertical + Vector3.right * dynamicJoystick.Horizontal;
 
         transform.position += direction * speed * Time.deltaTime;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 5f * Time .deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 5f * Time .deltaTime);    
     }
 
 }
