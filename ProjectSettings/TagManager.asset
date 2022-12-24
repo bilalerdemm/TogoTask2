@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CollectTable
   - CompareTable
+  - CompareTableGreen
+  - CompareTableRed
   layers:
   - Default
   - TransparentFX

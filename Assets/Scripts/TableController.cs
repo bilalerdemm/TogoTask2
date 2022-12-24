@@ -13,12 +13,12 @@ public class TableController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "CollectTable")
+        if (other.gameObject.tag == "CompareTableGreen")
         {
             Debug.Log("Toplanabilir.");
             
         }
-        if (other.gameObject.tag == "CompareTable")
+        if (other.gameObject.tag == "CompareTableRed")
         {
             Debug.Log("Karsilastirilabilir.");
         }

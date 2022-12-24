@@ -16,7 +16,11 @@ public class JoystickPlayerExample : MonoBehaviour
     public void FixedUpdate()
     {
         Vector3 direction = Vector3.forward * dynamicJoystick.Vertical + Vector3.right * dynamicJoystick.Horizontal;
-        rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+
+        //rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+
+        transform.position += direction * speed * Time.deltaTime;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 5f * Time.deltaTime);
     }
 
 }
