@@ -3830,7 +3830,6 @@ GameObject:
   - component: {fileID: 6249081581632821862}
   - component: {fileID: 4481601631447208141}
   - component: {fileID: 626830869817385366}
-  - component: {fileID: 8148503151371052405}
   m_Layer: 0
   m_Name: Table
   m_TagString: CompareTableRed
@@ -3838,22 +3837,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &8148503151371052405
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148503151371052404}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8148503151760745438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,7 +3849,6 @@ GameObject:
   - component: {fileID: 6249081581184474316}
   - component: {fileID: 4481601631065871975}
   - component: {fileID: 626830869502371644}
-  - component: {fileID: 8148503151760745439}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -3874,22 +3856,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &8148503151760745439
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148503151760745438}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8203685515107633479
 GameObject:
   m_ObjectHideFlags: 0
