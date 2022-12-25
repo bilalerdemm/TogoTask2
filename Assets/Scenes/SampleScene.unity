@@ -1064,6 +1064,8 @@ MonoBehaviour:
   speed: 5
   dynamicJoystick: {fileID: 1150923041}
   rb: {fileID: 849031730}
+  backGround: {fileID: 2132203202}
+  playerAnim: {fileID: 849031735}
 --- !u!54 &849031730
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1160,6 +1162,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &849031735
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849031728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9c4de0aa74e419d49a293171b2f47fe1, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3b8d5e5935ae12b4f858a3aa2bc8e939, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &887141422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2287,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119793792}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2132203202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8135886327475159578, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+  m_PrefabInstance: {fileID: 1279804170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &38248729365104984
 Transform:
   m_ObjectHideFlags: 0

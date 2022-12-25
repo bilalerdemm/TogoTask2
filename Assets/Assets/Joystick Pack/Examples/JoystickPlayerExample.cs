@@ -7,6 +7,8 @@ public class JoystickPlayerExample : MonoBehaviour
     public float speed;
     public DynamicJoystick dynamicJoystick;
     public Rigidbody rb;
+    public GameObject backGround;
+    public Animator playerAnim;
 
     private void Start()
     {
@@ -15,10 +17,18 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public void FixedUpdate()
     {
-        Vector3 direction = Vector3.forward * dynamicJoystick.Vertical + Vector3.right * dynamicJoystick.Horizontal;
+        if (backGround.activeInHierarchy)
+        {
+            playerAnim.SetBool("isRunning", true);
+            Vector3 direction = Vector3.forward * dynamicJoystick.Vertical + Vector3.right * dynamicJoystick.Horizontal;
 
-        transform.position += direction * speed * Time.deltaTime;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 5f * Time .deltaTime);    
+            transform.position += direction * speed * Time.deltaTime;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 10f * Time.deltaTime);
+        }
+        else
+        {
+            playerAnim.SetBool("isRunning", false);
+        }
     }
 
 }
